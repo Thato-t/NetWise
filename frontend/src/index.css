@@ -5,4 +5,27 @@ html, body, #root {
   height: 100%;
 }
 
+/* Design tokens (approx. from mock) */
+:root {
+  --color-bg: #F6F8FC; /* app background */
+  --color-text: #0f172a; /* title text */
+  --color-muted: #64748b; /* secondary text */
+  --color-card: #ffffff; /* surface */
+  --color-border: #e5e7eb; /* borders */
+  --color-primary: #1677ff; /* primary blue */
+}
+
+@layer base {
+  body { @apply bg-[var(--color-bg)] text-[var(--color-text)]; }
+  h1,h2,h3 { @apply text-[var(--color-text)]; }
+  .muted { @apply text-[var(--color-muted)]; }
+}
+
+@layer components {
+  .card { @apply rounded-xl border border-[var(--color-border)] bg-[var(--color-card)] shadow-sm; }
+  .chip { @apply inline-flex items-center gap-1 rounded-full border border-[var(--color-border)] px-3 py-1 text-xs; }
+  .btn-primary { @apply inline-flex items-center justify-center rounded-md bg-[var(--color-primary)] px-4 py-3 text-sm font-medium text-white hover:opacity-90; }
+  .btn-outline { @apply inline-flex items-center justify-center rounded-md border border-[var(--color-border)] bg-white px-4 py-3 text-sm hover:bg-slate-50; }
+}
+
 
