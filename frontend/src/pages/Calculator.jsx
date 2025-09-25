@@ -39,7 +39,10 @@ export default function Calculator() {
       </div>
 
       <div className="mt-3">
-        <button className="btn-outline w-full">Explore Guided Trials</button>
+        <button className="btn-outline w-full bg-[#2D84FF] text-white font-semibold">
+         <img src="/icons/white/gift.png" alt="gift" className="h-5 w-5 mr-1" />
+          Explore Guided Trials
+        </button>
       </div>
     </div>
   );

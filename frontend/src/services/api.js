@@ -2,17 +2,21 @@ const API_BASE = import.meta.env.VITE_API_BASE || 'http://localhost:3001/api';
 
 export async function fetchBundles() {
   const res = await fetch(`${API_BASE}/bundles`);
-  return res.json();
+  const data = await res.json();
+  console.log(data)
+  return data;
 }
 
 export async function runSpeedTest() {
   const res = await fetch(`${API_BASE}/speed/run`, { method: 'POST' });
-  return res.json();
+  const data = await res.json();
+  return data;
 }
 
 export async function getSpeedSummary() {
   const res = await fetch(`${API_BASE}/speed/summary`);
-  return res.json();
+  const data = await res.json();
+  return data;
 }
 
 export async function submitResult(payload) {
@@ -21,7 +25,8 @@ export async function submitResult(payload) {
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify(payload),
   });
-  return res.json();
+  const data =  res.json();
+  return data;
 }
 
 

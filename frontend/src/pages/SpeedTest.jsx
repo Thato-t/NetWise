@@ -25,17 +25,17 @@ export default function SpeedTest() {
         <button onClick={run} className="btn-primary mb-4 w-full">Run Speed Test</button>
 
         <div className="grid grid-cols-2 gap-3">
-          <div className="rounded-lg bg-slate-50 p-3 text-center dark:bg-slate-900/40">
+          <div className="rounded-lg bg-slate-50 p-3 text-center dark:bg-slate-100/40">
             <div className="mx-auto mb-1 h-4 w-4"><img src="/icons/green/folder-down-arrow.png" alt="download" className="h-4 w-4" /></div>
             <div className="text-xs text-slate-500">Download</div>
             <div className="text-lg font-semibold">{result.downloadMbps} Mbps</div>
           </div>
-          <div className="rounded-lg bg-slate-50 p-3 text-center dark:bg-slate-900/40">
+          <div className="rounded-lg bg-slate-50 p-3 text-center dark:bg-slate-100/40">
             <div className="mx-auto mb-1 h-4 w-4"><img src="/icons/green/folder-up-arrow.png" alt="upload" className="h-4 w-4" /></div>
             <div className="text-xs text-slate-500">Upload</div>
             <div className="text-lg font-semibold">{result.uploadMbps} Mbps</div>
           </div>
-          <div className="col-span-2 rounded-lg bg-slate-50 p-3 text-center dark:bg-slate-900/40">
+          <div className="col-span-2 rounded-lg bg-slate-50 p-3 text-center dark:bg-slate-100/40">
             <div className="mx-auto mb-1 h-4 w-4"><img src="/icons/green/tachometer.png" alt="ping" className="h-4 w-4" /></div>
             <div className="text-xs text-slate-500">Ping</div>
             <div className="text-lg font-semibold">{Math.round(result.latencyMs)} ms</div>

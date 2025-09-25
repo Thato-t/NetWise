@@ -8,7 +8,7 @@ const inactive = 'text-slate-500 dark:text-slate-400';
 export default function BottomNav() {
   const linkClass = ({ isActive }) => `${itemBase} ${isActive ? active : inactive}`;
   return (
-    <nav className="fixed inset-x-0 bottom-0 z-10 border-t border-slate-200 bg-white/95 backdrop-blur dark:border-slate-700 dark:bg-slate-900/80">
+    <nav className="fixed inset-x-0 bottom-0 z-10 border-t border-slate-200 bg-white/95 backdrop-blur">
       <div className="mx-auto flex max-w-4xl">
         <NavLink to="/" className={linkClass}>
           <img src="/icons/gray/home.png" alt="Home" className="h-5 w-5" />

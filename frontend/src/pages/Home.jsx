@@ -39,22 +39,22 @@ export default function Home() {
         <div className="mb-4">
           <div className="mb-1 text-center text-[13px] font-medium text-slate-500">Database & WiFi Helper</div>
           <h1 className="text-[22px] font-semibold">Good morning, User!</h1>
-          <p className="text-sm text-slate-600 dark:text-slate-300">Here’s your network overview.</p>
+          <p className="text-sm text-slate-900 dark:text-slate-300">Here’s your network overview.</p>
         </div>
 
         <Notice message={notice} />
 
         {/* Status cards */}
         <div className="mt-4 grid grid-cols-2 gap-3">
-          <div className="rounded-xl border border-slate-200 bg-white p-4 text-center shadow-sm dark:border-slate-700 dark:bg-slate-800">
-            <img src="/icons/green/compass.png" alt="compare" className="h-5 w-5" />
-            <div className="mb-1 text-xs text-slate-500">Internet Speed</div>
+          <div className="rounded-xl border border-slate-200 bg-white p-2 text-center shadow-sm">
+            <img src="/icons/green/compass.png" alt="compare" className="h-8 w-8 ml-18 mb-2" />
+            <div className="mb-1 text-xl text-black font-semibold">Internet Speed</div>
             <div className="text-2xl font-semibold">{typeof speed === 'number' ? speed : '--'}</div>
             <div className="text-xs text-slate-500">Mbps</div>
           </div>
-          <div className="rounded-xl border border-slate-200 bg-white p-4 text-center shadow-sm dark:border-slate-700 dark:bg-slate-800">
-            <img src="/icons/blue/database.png" alt="compare" className="h-5 w-5" />
-            <div className="mb-1 text-xs text-slate-500">Database Usage</div>
+          <div className="rounded-xl border border-slate-200 bg-white p-4 text-center shadow-sm">
+            <img src="/icons/blue/database.png" alt="compare" className="h-8 w-8 ml-18 mb-2" />
+            <div className="mb-1 text-xl text-black font-semibold">Database Usage</div>
             <div className="text-2xl font-semibold">{dataUsed.split(' ')[0]}</div>
             <div className="text-xs text-slate-500">{dataUsed.split(' ').slice(1).join(' ')}</div>
           </div>
